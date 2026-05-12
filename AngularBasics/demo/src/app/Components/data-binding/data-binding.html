@@ -1,0 +1,39 @@
+
+<table>
+    <tr>
+        <!-- interpolation -->
+        <td>{{ courseName }}</td>
+
+        <td>{{ courseRating}}</td>
+
+        <td> <span>{{studentCount}}</span> </td>
+    </tr>
+    <tr>
+
+    <tr>
+        <td>
+            <!-- interpolation -->
+            <input type="text" value="{{courseName}}" />
+             
+            <!-- property binding -->
+            <input type="text" [value]="courseName" />
+        </td>
+
+        <td>
+            <!-- event binding -->
+            <button (click)="onEnroll()">Enroll</button>
+        </td>
+
+        <td>
+            <button (click)="changeCourseName()">change</button>
+        </td>
+
+        <td>
+            <!-- two way binding -->
+            <input type="text" [(ngModel)]="courseName" />
+        </td>
+    </tr>
+
+        
+    
+</table>

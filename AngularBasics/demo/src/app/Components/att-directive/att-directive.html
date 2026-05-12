@@ -1,0 +1,24 @@
+<p>att-directive works!</p>
+
+<div class="col-3"
+     [ngClass]="divClassName()"
+     style="height:100px; width:100px; border:1px solid black; margin-bottom:10px;">
+  Div 1 - {{ divClassName() }}
+</div>
+
+<div
+  [ngStyle]="{
+    'height.px': 100,
+    'width.px': 100,
+    'border': '1px solid black',
+    'background-color': isdiv2ClassName ? 'lightgreen' : 'lightcoral',
+    'margin-bottom.px': 10
+  }">
+  Div 2
+</div>
+
+<div>
+  <button class="btn btn-success" (click)="setBgClass('bg-success')">Green</button>
+  <button class="btn btn-danger" (click)="setBgClass('bg-danger')">Red</button>
+  <button class="btn btn-success" (click)="toggleDiv2Class()">Toggle Colour</button>
+</div>

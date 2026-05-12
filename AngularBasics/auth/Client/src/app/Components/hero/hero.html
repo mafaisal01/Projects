@@ -1,0 +1,29 @@
+
+<!-- ====== Courses Section ====== -->
+<section class="courses-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Our Popular Courses</h2>
+    <div class="row g-4">
+      <!-- Example of course card -->
+      <div class="col-md-4" *ngFor="let course of courses">
+        <div class="card h-100 shadow-sm border-0">
+          <img
+            [src]="course.image"
+            class="card-img-top"
+            [alt]="course.title"
+            style="height: 200px; object-fit: cover;"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title fw-bold">{{ course.title }}</h5>
+            <p class="card-text text-muted">{{ course.description }}</p>
+          </div>
+          <div class="card-footer bg-transparent border-0 text-center">
+            <a  class="btn btn-primary btn-sm">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

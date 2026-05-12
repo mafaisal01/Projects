@@ -1,0 +1,78 @@
+<p>api-rf works!</p>
+
+<div class="row">
+  <!-- User Table -->
+  <div class="col-6">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>Email Id</th>
+          <th>Full Name</th>
+          <th>Mobile No.</th>
+          <th>Password</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of userList; track $index) {
+          <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ item.emailId }}</td>
+            <td>{{ item.fullName }}</td>
+            <td>{{ item.mobileNo }}</td>
+            <td>{{ item.password }}</td>
+            <td>
+              <button class="btn btn-sm btn-primary" (click)="onEdit(item)">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="onDelete(item.userId)">Delete</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Reactive Form -->
+  <div class="col-6">
+    <div class="card">
+      <div class="card-header bg-success text-white">
+        New User
+      </div>
+      <div class="card-body">
+        <form [formGroup]="userForm" (ngSubmit)="userObject.userId === 0 ? onSaveUser() : onUpdateUser()">
+          <div class="row">
+            <div class="col-6 mb-2">
+              <label>Email</label>
+              <input type="text" formControlName="emailId" class="form-control" />
+            </div>
+            <div class="col-6 mb-2">
+              <label>Password</label>
+              <input type="text" formControlName="password" class="form-control" />
+            </div>
+            <div class="col-6 mb-2">
+              <label>Full Name</label>
+              <input type="text" formControlName="fullName" class="form-control" />
+            </div>
+            <div class="col-6 mb-2">
+              <label>Mobile No</label>
+              <input type="text" formControlName="mobileNo" class="form-control" />
+            </div>
+          </div>
+
+          <div class="row pt-3">
+            <div class="col-6 text-center">
+              <button type="button" class="btn btn-secondary" (click)="onReset()">Reset</button>
+            </div>
+            <div class="col-6 text-center">
+              @if (userObject.userId === 0) {
+                <button type="button" class="btn btn-success" (click)="onSaveUser()">Save</button>
+              } @else {
+                <button type="button" class="btn btn-warning" (click)="onUpdateUser()">Update</button>
+              }
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

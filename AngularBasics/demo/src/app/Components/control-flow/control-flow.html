@@ -1,0 +1,37 @@
+<p>controlflow working</p>
+<table>
+    <tr>
+        <td>
+            @if(isParagraphVisible == true){
+                <p>This paragraph is visibile.</p>
+            }@else{
+                <p>The paragraph is hidden and false value of isParagraphVisible</p>
+            }
+        </td>
+        <td>
+            <button (click)="showParagraph()">Show Paragraph</button>
+            <button (click)="hideParagraph()">Hide Paragraph</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @if(startMonth == "January"){
+                <p>It's the start of a new year!</p>
+            }@else if(startMonth == "June"){
+                <p>It's mid-year already!</p>
+            }@else{
+                <p>Just another month.</p>
+            }
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <ul>
+                @for(item of monthList; track $index){
+                    <li>{{item}}</li>
+                }
+            </ul>
+        </td>
+    </tr>
+</table>

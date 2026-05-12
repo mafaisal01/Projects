@@ -1,0 +1,18 @@
+<p>clc-events works!</p>
+
+<div>
+    <h2>Lifecycle Hooks Demonstration</h2>
+
+    <!-- pipes and pipeline -->
+     <!-- can added multiple {{ ||||}} pipes in single  -->
+    <p>First Name: {{ firstName | uppercase }}</p>
+    <p>Last Name: {{ lastName }}</p>
+
+    <!-- object print with pipe -->
+    <p>student object: {{studentdetails | json}}</p>
+
+    <!-- custom pipe applied -->
+    <p>custom object: {{studentdetails.name | custompipe}}</p>
+
+    <p>custom object: {{studentdetails.email| custompipe}}</p>
+</div>

@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLinkActive="active" routerLink="admin" >Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="user" >User</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="databinding" >DataBinding</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="signal" >Signal</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="controlflow" >ControlFlow</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="attDirective" >AttDirective</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="clcEvents" >CLC&Events</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="api" >API-template form</a>   
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="apirf" >API-reactive form</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- app components -->
+
+<h1>Welcome home page</h1>
+
+<!-- <h5> <app-admin></app-admin> </h5>
+<h5> <app-user></app-user> </h5>
+<h5> <app-data-binding></app-data-binding> </h5>
+
+<h5> <app-signal></app-signal> </h5>
+
+<h5> <app-control-flow></app-control-flow> </h5>  -->
+
+<!-- data fetch/ show from app component -->
+<router-outlet />
